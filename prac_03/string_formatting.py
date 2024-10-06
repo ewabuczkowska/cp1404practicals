@@ -1,5 +1,6 @@
 """
-CP1404/CP5632 - Practical
+CP1404/CP5632 - Practical 3 - 1. String Formatting
+
 Various examples of using Python string formatting.
 (We prefer f-strings in this subject.)
 Want to read more about it?
