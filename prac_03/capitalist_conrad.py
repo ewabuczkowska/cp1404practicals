@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical 3 - 3. Capitalist Conrad
+CP1404 - Practical 3 - 3. Capitalist Conrad
 
 Capitalist Conrad wants a stock price simulator for a volatile stock.
 The price starts off at $10.00, and, at the end of every day there is

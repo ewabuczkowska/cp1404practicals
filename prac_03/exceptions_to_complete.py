@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical 3 - 5. Exceptions to complete
+CP1404 - Practical 3 - 5. Exceptions to complete
 Fill in the TODOs to complete the task
 """
 

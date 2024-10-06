@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical 3 - 2. Random Numbers
+CP1404 - Practical 3 - 2. Random Numbers
 """
 # What did you see on line 1?
 # 5, 19, 12 -> A random number between 5 and 20
