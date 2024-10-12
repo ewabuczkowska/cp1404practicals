@@ -1,6 +1,5 @@
 """
 CP1404 - Practical 3 - 5. Exceptions to complete
-Fill in the TODOs to complete the task
 """
 
 is_finished = False

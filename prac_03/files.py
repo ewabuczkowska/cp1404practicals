@@ -18,12 +18,13 @@ print(f"Hi {name_from_file}!")
 with open('numbers.txt', 'r') as file:
     first_number = int(file.readline().strip())
     second_number = int(file.readline().strip())
-    result = first_number + second_number
-    print(result)
+    result = first_number + second_number # should not be indented, as it is not part of with
+    print(result) # same
 
 # 4)
 with open('numbers.txt', 'r') as file:
     total = 0
     for line in file:  # Using for line in file to iterate through each line
         total += int(line.strip())  # Converting each line to int and adding to total
-    print(total)
+    print(total) # should not be indented
+    

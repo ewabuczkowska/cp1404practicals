@@ -1,5 +1,6 @@
 """
 CP1404 - Practical 3 - 4. Exceptions Demo
+
 Answer the following questions:
 1. When will a ValueError occur?
 2. When will a ZeroDivisionError occur?

@@ -41,7 +41,7 @@ def is_valid_password(password):
             number_of_upper += 1
         elif character.isdigit():
             number_of_digit += 1
-        elif IS_SPECIAL_CHARACTER_REQUIRED and character in SPECIAL_CHARACTERS:
+        elif IS_SPECIAL_CHARACTER_REQUIRED and character in SPECIAL_CHARACTERS: # do not do IS_SPECIAL_CHARACTER_REQUIRED as it is redundant here
             number_of_special += 1
 
     if number_of_lower == 0 or number_of_upper == 0 or number_of_digit == 0:
