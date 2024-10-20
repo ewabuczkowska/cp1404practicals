@@ -1,7 +1,7 @@
 """
 CP1404 - Practical 5 - 3. Word Occurrences
 Estimate: 30 minutes
-Actual:   minutes
+Actual:   45 minutes
 """
 
 def main():
