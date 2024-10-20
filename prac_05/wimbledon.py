@@ -6,10 +6,12 @@ Actual:   1 hour 20 minutes
 """
 FILENAME = "wimbledon.csv"
 
+
 def main():
     records = read_data(FILENAME)
     champion_to_count, countries = process_records(records)  # Correct unpacking
     display_results(champion_to_count, countries)
+
 
 def read_data(filename):
     """Read Wimbledon data from a CSV file and return a list of records."""
@@ -20,6 +22,7 @@ def read_data(filename):
             parts = line.strip().split(",")
             records.append(parts)
     return records
+
 
 def process_records(records):
     """Count champions and track countries from the records provided."""
@@ -34,6 +37,7 @@ def process_records(records):
             champion_to_count[record[2]] = 1
     return champion_to_count, countries
 
+
 def display_results(champion_to_count, countries):
     """Display the results of the processed data."""
     print("Wimbledon Champions:")
@@ -42,5 +46,6 @@ def display_results(champion_to_count, countries):
 
     print(f"\nThese {len(countries)} countries have won Wimbledon:")
     print(", ".join(country for country in sorted(countries)))
+
 
 main()

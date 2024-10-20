@@ -22,8 +22,8 @@ for colour in COLOUR_TO_HEX:
 
 colour_name = input("Colour: ").title()
 while colour_name != "":
-        try:
-            print(f"{colour_name} is {COLOUR_TO_HEX[colour_name]}")
-        except KeyError:
-            print(f"'{colour_name}' is not a valid colour name")
-        colour_name = input("Colour: ").title()
+    try:
+        print(f"{colour_name} is {COLOUR_TO_HEX[colour_name]}")
+    except KeyError:
+        print(f"'{colour_name}' is not a valid colour name")
+    colour_name = input("Colour: ").title()
