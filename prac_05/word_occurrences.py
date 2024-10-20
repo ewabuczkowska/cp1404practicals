@@ -5,6 +5,7 @@ Actual:   45 minutes
 """
 
 def main():
+    """Docstring!"""
     user_input = input("Text: ")
     word_to_value = count_word_occurrences(user_input)
     max_word_length = max(len(word) for word in word_to_value)
@@ -12,6 +13,7 @@ def main():
         print(f"{word:{max_word_length}} : {count}")
 
 def count_word_occurrences(text):
+    """Docstring!"""
     words = text.split()
     word_to_value = {}
     for word in words:
