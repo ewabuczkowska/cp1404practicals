@@ -1,4 +1,4 @@
-"""CP1404 - Practical 06- Car class example."""
+"""CP1404 - Practical 06- 1. Cars"""
 
 
 class Car:
@@ -12,7 +12,6 @@ class Car:
         self.name = name
         self.fuel = fuel
         self._odometer = 0
-
 
     def __str__(self):
         """Return string representation of Car."""
