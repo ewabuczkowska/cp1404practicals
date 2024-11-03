@@ -1,5 +1,5 @@
 """
-CP1404 - Practical 06 - 3. Guitar
+CP1404 - Practical 06 - 3. Guitars
 """
 from guitar import Guitar
 

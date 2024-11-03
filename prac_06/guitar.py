@@ -1,8 +1,11 @@
 """
-CP1404 - Practical 06 - 3. Guitar
+CP1404 - Practical 06 - 3. Guitars
 """
+
+
 class Guitar:
     CURRENT_YEAR = 2024
+
     def __init__(self, name="", year=0, cost=0):
         """Initialize a Guitar instance with name, year, and cost."""
         self.name = name
