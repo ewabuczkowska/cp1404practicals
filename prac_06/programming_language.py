@@ -1,7 +1,7 @@
 """
-CP1404 - Practical 06 - Programming Languages
+CP1404 - Practical 06 - 2. Programming Languages
 Estimate: 1h
-Actual:
+Actual: 1h
 """
 
 
