@@ -68,6 +68,23 @@ def main():
         save_projects(projects, "projects.txt")
     print("Thank you for using custom-built project management software")
 
+def load_projects(filename):
+    """Load projects from file"""
+    projects = []
+    with open(filename) as file:
+        file.readline()  # Skip header
+        for line in file:
+            parts = line.strip().split('\t')
+            name = parts[0]
+            start_date = datetime.datetime.strptime(parts[1], "%d/%m/%Y").date()
+            priority = int(parts[2])
+            cost_estimate = float(parts[3])
+            completion_percentage = int(parts[4])
+            project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+            projects.append(project)
+    return projects
+
+
 
 
 if __name__ == '__main__':
