@@ -9,5 +9,5 @@ My name is Ewa Buczkowska and I am currently in my second year at JCU studying a
 - Meaningful Names - Use descriptive variable and function names that explain their purpose
 
 ## Links
-[Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns)
+[Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns)  
 [CP1404 Practicals instructions repository](https://github.com/CP1404/Practicals.git)
