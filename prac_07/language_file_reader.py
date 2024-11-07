@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical
+CP1404 - Practical 07 - 2. Programming Languages
 File and class example - opens/reads a file, stores in objects of custom class
 (contains multiple versions for demonstration: using csv and namedtuple)
 """
@@ -26,6 +26,7 @@ def main():
         # print(parts)  # debugging
         # Reflection is stored as a string (Yes/No) and we want a Boolean
         reflection = parts[2] == "Yes"
+        pointer_arithmetic = parts[4] == "Yes"  # Convert the Yes/No string to boolean
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
         language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
