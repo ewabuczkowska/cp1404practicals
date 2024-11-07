@@ -26,39 +26,17 @@ def main():
     choice = input(f"{MENU}\n>>> ").upper()
     while choice != "Q":
         if choice == "L":
-            filename = input("Filename to load projects from: ")
-            projects = load_projects(filename)
+            projects = load_projects_from_user()
         elif choice == "S":
-            filename = input("Filename to save projects to: ")
-            save_projects(projects, filename)
+            save_projects_to_file(projects)
         elif choice == "D":
             display_projects(projects)
         elif choice == "F":
-            date_string = input("Show projects that start after date (dd/mm/yy): ")
-            date = datetime.datetime.strptime(date_string, "%d/%m/%y").date()
-            filtered_projects = [project for project in projects if project.start_date > date]
-            for project in sorted(filtered_projects, key=lambda x: x.start_date):
-                print(project)
+            filter_projects_by_date(projects)
         elif choice == "A":
-            print("Let's add a new project")
-            name = input("Name: ")
-            date_string = input("Start date (dd/mm/yy): ")
-            start_date = datetime.datetime.strptime(date_string, "%d/%m/%y").date()
-            priority = int(input("Priority: "))
-            cost_estimate = float(input("Cost estimate: $"))
-            completion = int(input("Percent complete: "))
-            projects.append(Project(name, start_date, priority, cost_estimate, completion))
+            add_project(projects)
         elif choice == "U":
-            for i, project in enumerate(projects):
-                print(f"{i} {project}")
-            project_choice = int(input("Project choice: "))
-            print(projects[project_choice])
-            new_percentage = input("New Percentage: ")
-            if new_percentage:
-                projects[project_choice].completion_percentage = int(new_percentage)
-            new_priority = input("New Priority: ")
-            if new_priority:
-                projects[project_choice].priority = int(new_priority)
+            update_project(projects)
         else:
             print("Invalid choice")
         choice = input(f"{MENU}\n>>> ").upper()
@@ -84,7 +62,27 @@ def load_projects(filename):
             projects.append(project)
     return projects
 
+def save_projects(projects, filename):
+    """Save projects to file"""
+    with open(filename, 'w') as file:
+        print("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=file)
+        for project in projects:
+            print(
+                f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t{project.cost_estimate}\t{project.completion_percentage}",
+                file=file)
 
+
+def display_projects(projects):
+    """Display projects sorted by priority"""
+    incomplete_projects = [project for project in projects if not project.is_complete()]
+    completed_projects = [project for project in projects if project.is_complete()]
+
+    print("Incomplete projects: ")
+    for project in sorted(incomplete_projects):
+        print(f"  {project}")
+    print("Completed projects: ")
+    for project in sorted(completed_projects):
+        print(f"  {project}")
 
 
 if __name__ == '__main__':
