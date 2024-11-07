@@ -1,5 +1,5 @@
 """
-CP1404 - Practical 07 - 3. Guitars
+CP1404 - Practical 07 - 3. More Guitars
 """
 
 
