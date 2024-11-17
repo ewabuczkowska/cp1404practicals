@@ -3,47 +3,44 @@ CP1404 - Practical 08 - 4. Miles to Kilometres Converter
 """
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.properties import StringProperty
+
+__author__ = 'Ewa Buczkowska'
 
 MILES_TO_KM = 1.60934
 
 
-class MilesConverterApp(App):
-    """ MilesConverterApp is a Kivy App for converting miles to kilometres """
-    output_km = StringProperty()
+class MilesToKmApp(App):
+    """ Kivy App for converting miles to kilometres. """
 
     def build(self):
-        """ build the Kivy app from the kv file """
+        """ Build the Kivy app from the kv file """
         self.title = "Convert Miles to Kilometres"
         self.root = Builder.load_file('convert_miles_km.kv')
-        self.handle_calculate()  # Set initial output
         return self.root
 
-    def handle_calculate(self):
-        """ Handle calculation (could be button press or other call), output result to label widget """
-        value = self.get_validated_miles()
+    def handle_calculation(self):
+        """ Handle calculation and update the result label. """
+        value = self.validate_input()
         result = value * MILES_TO_KM
-        self.output_km = str(result)
+        self.root.ids.result_label.text = str(result)
 
     def handle_increment(self, change):
         """
-        handle up/down button press, update the text input with new value, call calculation function
-        :param change: the amount to change
+        Handle up/down button press and update the input value.
         """
-        value = self.get_validated_miles() + change
+        value = self.validate_input() + change
         self.root.ids.input_miles.text = str(value)
-        self.handle_calculate()
+        self.handle_calculation()
 
-    def get_validated_miles(self):
+    def validate_input(self):
         """
-        get text input from text entry widget, convert to float
-        :return: 0 if error, float version of text if valid
+        Convert text input to float, with error handling.
         """
         try:
-            value = float(self.root.ids.input_miles.text)
-            return value
+            return float(self.root.ids.input_miles.text)
         except ValueError:
             return 0
 
 
-MilesConverterApp().run()
+if __name__ == '__main__':
+    MilesToKmApp().run()
