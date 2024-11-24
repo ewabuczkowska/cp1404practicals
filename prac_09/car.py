@@ -1,5 +1,5 @@
 """
-CP1404  - Practical 09 - 1. Test Taxi
+CP1404  - Practical 09 - Car class
 """
 
 
@@ -10,7 +10,7 @@ class Car:
         """Initialise a Car instance."""
         self.name = name
         self.fuel = fuel
-        self._odometer = 0
+        self.odometer = 0
 
     def __str__(self):
         """Return string representation of Car."""
@@ -27,5 +27,5 @@ class Car:
             self.fuel = 0
         else:
             self.fuel -= distance
-        self._odometer += distance
+        self.odometer += distance
         return distance
