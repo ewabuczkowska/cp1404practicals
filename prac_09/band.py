@@ -1,4 +1,6 @@
-""" CP1404 - Practical 09 - Band class"""
+"""
+CP1404 - Practical 09 - Band class
+"""
 
 
 class Band:
