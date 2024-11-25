@@ -1,5 +1,5 @@
 """
-CP1404  - Practical 09 - 3. Silver Service Taxi
+CP1404  - Practical 09 - Silver Service Taxi class
 """
 
 from prac_09.taxi import Taxi

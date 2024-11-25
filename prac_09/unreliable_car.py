@@ -1,5 +1,5 @@
 """
-CP1404  - Practical 09 - 2. Unreliable car
+CP1404  - Practical 09 - Unreliable Car class
 """
 from prac_09.car import Car
 import random
